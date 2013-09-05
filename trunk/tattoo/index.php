@@ -146,5 +146,13 @@
 			</code>
 		</div>
 	</div>
+	<div class="example-contents">
+		<div class="phpcode">
+			<code><span style="color: #000000">
+<span style="color: #E70C2F">&lt;?php&nbsp;</span><br /><span style="color: #007700">call_user_func&nbsp;</span><span style="color: #007700">(<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$j&nbsp;</span><span style="color: #007700">=&nbsp;function()&nbsp;use&nbsp;(&amp;</span><span style="color: #0000BB">$j</span><span style="color: #007700">,&nbsp;&amp;</span><span style="color: #0000BB">$k</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$i&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">fgets</span><span style="color: #007700">(</span><span style="color: #0000BB">STDIN</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">$i&nbsp;</span><span style="color: #007700">==&nbsp;</span><span style="color: #0000BB">PHP_EOL</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;(</span><span style="color: #0000BB">fputs</span><span style="color: #007700">(</span><span style="color: #0000BB">STDOUT</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">serialize</span><span style="color: #007700">(</span><span style="color: #0000BB">$k</span><span style="color: #007700">)));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$k</span><span style="color: #007700">[]&nbsp;=&nbsp;</span><span style="color: #0000BB">$i</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$j</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;},&nbsp;</span><span style="color: #0000BB">$k</span><span style="color: #007700">=array()<br />);</span>
+</span>
+</code>
+		</div>
+	</div>
 </body>
 </html>
