@@ -94,8 +94,8 @@
 				</span>
 			</code>
 		</div>
-	</div -->
-	<!-- div class="example-contents">
+	</div>
+	<div class="example-contents">
 		<div class="phpcode">
 			<code>
 				<span style="color: #000000"> <span style="color: #0000BB">&lt;?php&nbsp;$k</span><span
