@@ -46,7 +46,7 @@
  */
 
 .progressbar-inner {
-    background-color: #f2c345;
+    background-color: #0B7DDE; // - Original #f2c345
 }
 .percent_10 .progressbar-inner {
 	width: 10%;
