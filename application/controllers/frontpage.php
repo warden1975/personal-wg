@@ -6,7 +6,9 @@ if (!defined('BASEPATH'))
 class Frontpage extends Main_Controller {
     
     public function index() {
-        $this->load->view('include/header');
+        $data = array('ap_title' => 'Airpush Audit Form');
+        
+        $this->load->view('include/header', $data);
         $this->load->view('templates/navbar');
         $this->load->view('include/footer');
     }
