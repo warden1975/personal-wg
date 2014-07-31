@@ -504,13 +504,13 @@ footer {
 .comment_form input {
 	/* Positioning & Display */
 	width: 100%;
-	height: 30px;
+	height: 17px;
 	margin-bottom: 15px;
 	padding-left: 15px;
 	/* Elemants */
 	-moz-border-radius: 0;
 	-webkit-border-radius: 0;
-	border-radius: 0;
+	border-radius: 5;
 	border: 1px solid #e4e2e2;
 }
 .comment_form textarea {
@@ -523,7 +523,7 @@ footer {
 	border: 1px solid #e4e2e2;
 	-moz-border-radius: 0;
 	-webkit-border-radius: 0;
-	border-radius: 0;
+	border-radius: 5;
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder  {
