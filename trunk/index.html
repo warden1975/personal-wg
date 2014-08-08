@@ -192,6 +192,10 @@
                             <div class="progressbar percent_80">
                                 <div class="progressbar-inner"></div>
                             </div>
+                            <h4>Third-party Integrations</h4>
+                            <div class="progressbar percent_90">
+                                <div class="progressbar-inner"></div>
+                            </div>
                         </div> <!-- /skill_level -->
                     </section> <!-- /my_expertise -->
                     <!-- end MY EXPERTISE -->
@@ -496,6 +500,7 @@
                                     <input type="text" id="form_name" data-required="true" data-trigger="focusin focusout" placeholder="Name">
                                     <input type="text" id="form_email" data-required="true" data-trigger="focusin focusout" data-type="email" placeholder="Email Address">
                                     <textarea rows="8" id="form_message" data-required="true" data-trigger="focusin focusout" placeholder="Message"></textarea>
+                                    <img id="form_loading" src='img/loader7.gif' />
                                     <div class="send-button pull-right"> <a>SEND THE MESSAGE </a> </div>
                                 </fieldset>
                             </form>
@@ -519,10 +524,17 @@
             });
             $(".send-button").click(function() {
                 if ($('.comment_form').parsley('validate')) {
+                    $('#form_loading').show();
                     var form_name = $("#form_name").val();
                     var form_email = $("#form_email").val();
                     var form_message = $("#form_message").val();
                     $.post("php/mailer.php", {name: form_name, email: form_email, message: form_message}, function(results) {
+                        $('#form_loading').hide();
+                        
+                        $('#form_name').removeAttr('value').attr('placeholder', 'Name');
+                        $('#form_email').removeAttr('value').attr('placeholder', 'Email Address');
+                        $('#form_message').removeAttr('value').attr('placeholder', 'Message');
+                        
                         alert(results);
                     });
                 }
