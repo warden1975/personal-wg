@@ -15,8 +15,8 @@ $body             = $message;
 
 $mail->SetFrom($email, $name);
 
-$address = "mail@mail.com"; // YOUR EMAIL ADDRESS
-$nameto = "YourName"; // YOUR NAME
+$address = "warren.gutierrez@gmail.com"; // YOUR EMAIL ADDRESS
+$nameto = "Warren Gutierrez"; // YOUR NAME
 $mail->AddAddress($address, $nameto); 
 
 $mail->Subject    = "Message from CV contact form";
