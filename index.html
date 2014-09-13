@@ -125,7 +125,7 @@
                                 <h5>skills that I’m<br /> proud of</h5>
                             </aside>
                             <article class="span4 borderleft par_el">
-                                <p><a href="http://www.zend.com/en/services/certification/zend-certified-engineer-directory#ClientCandidateID=ZEND009454&cid=0" target="window">
+                                <p><a id="zce-php5" href="http://www.zend.com/en/services/certification/zend-certified-engineer-directory#ClientCandidateID=ZEND009454&cid=0" target="window">
                                         <img alt='' src="img/zce-php5-3-logo.gif"></img></a></p>
                                 <p>I'm a Zend Certified Engineer on PHP web scripting language, passed examination (as part of formality) on August 29th of 2012. With strong knowledge on Functions, Data Formats/Types, 
                                     Web Features, OOP (Object-oriented programming), Security, I/O, String/Patterns, Databases/SQL, and Arrays. I've been using this for almost a decade now.</p>
@@ -554,13 +554,13 @@
             });
             $(".send-button").click(function() {
                 if ($('.comment_form').parsley('validate')) {
-                    ga('send', 'event', 'button', 'click', 'message post');
-                    
                     $('#form_loading').show();
                     var form_name = $("#form_name").val();
                     var form_email = $("#form_email").val();
                     var form_message = $("#form_message").val();
                     $.post("php/mailer.php", {name: form_name, email: form_email, message: form_message}, function(results) {
+                        ga('send', 'event', 'category', 'action', 'message post', results);
+                        
                         $('#form_loading').hide();
 
                         $('#form_name').removeAttr('value').attr('placeholder', 'Name');
@@ -680,19 +680,22 @@
             });
             
             $('#facebook').click(function() {
-                ga('send', 'event', 'button', 'click', 'facebook button');
+                ga('send', 'event', 'button', 'click', 'facebook');
             });
             $('#twitter').click(function() {
-                ga('send', 'event', 'button', 'click', 'twitter button');
+                ga('send', 'event', 'button', 'click', 'twitter');
             });
             $('#linkedin').click(function() {
-                ga('send', 'event', 'button', 'click', 'linkedin button');
+                ga('send', 'event', 'button', 'click', 'linkedin');
             });
             $('#google+').click(function() {
-                ga('send', 'event', 'button', 'click', 'google+ button');
+                ga('send', 'event', 'button', 'click', 'google+');
             });
             $('#print').click(function() {
-                ga('send', 'event', 'button', 'click', 'print button');
+                ga('send', 'event', 'button', 'click', 'print');
+            });
+            $('#zce-php5').click(function() {
+                ga('send', 'event', 'button', 'click', 'php zce');
             });
         </script>
     </body>
