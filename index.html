@@ -100,11 +100,11 @@
                             <div class="span3 cont_info">
                                 <div class="soc">
                                     <ul>
-                                        <li><a href="https://www.facebook.com/warrenegutierrez" target="blank"><img src="img/icons/facebook.png" alt="" /></a></li>
-                                        <li><a href="https://twitter.com/warrengutierrez" target="blank"><img src="img/icons/twitter.png" alt="" /></a></li>
-                                        <li><a href="http://ph.linkedin.com/in/warrengutierrez" target="blank"><img src="img/icons/linkedin.png" alt="" /></a></li>
-                                        <li><a href="https://plus.google.com/+WarrenGutierrez" target="blank"><img src="img/icons/google-plus.png" alt="" /></a></li>
-                                        <li><a class='print_this'><span class='icon-print'></span></a></li>
+                                        <li><a id="facebook" href="https://www.facebook.com/warrenegutierrez" target="blank"><img src="img/icons/facebook.png" alt="" /></a></li>
+                                        <li><a id="twitter" href="https://twitter.com/warrengutierrez" target="blank"><img src="img/icons/twitter.png" alt="" /></a></li>
+                                        <li><a id="linkedin" href="http://ph.linkedin.com/in/warrengutierrez" target="blank"><img src="img/icons/linkedin.png" alt="" /></a></li>
+                                        <li><a id="google+" href="https://plus.google.com/+WarrenGutierrez" target="blank"><img src="img/icons/google-plus.png" alt="" /></a></li>
+                                        <li><a id="print" class='print_this'><span class='icon-print'></span></a></li>
                                     </ul>
                                 </div>
                                 <div class="info">
@@ -554,6 +554,8 @@
             });
             $(".send-button").click(function() {
                 if ($('.comment_form').parsley('validate')) {
+                    ga('send', 'event', 'button', 'click', 'message post');
+                    
                     $('#form_loading').show();
                     var form_name = $("#form_name").val();
                     var form_email = $("#form_email").val();
@@ -675,6 +677,22 @@
             $('.upbtn').click(function() {
                 $("html, body").animate({scrollTop: 0}, 600);
                 return false;
+            });
+            
+            $('#facebook').click(function() {
+                ga('send', 'event', 'button', 'click', 'facebook button');
+            });
+            $('#twitter').click(function() {
+                ga('send', 'event', 'button', 'click', 'twitter button');
+            });
+            $('#linkedin').click(function() {
+                ga('send', 'event', 'button', 'click', 'linkedin button');
+            });
+            $('#google+').click(function() {
+                ga('send', 'event', 'button', 'click', 'google+ button');
+            });
+            $('#print').click(function() {
+                ga('send', 'event', 'button', 'click', 'print button');
             });
         </script>
     </body>
