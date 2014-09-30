@@ -112,6 +112,7 @@
                                         <li><span class="icon-mobile"></span><a>+63 917 632 0249</a></li>
                                         <li><span class="icon-location"></span><a>Bulacan, PHILIPPINES</a></li>
                                         <li><span class="icon-mail"></span><a href="mailto:warren.gutierrez@gmail.com">warren.gutierrez@gmail.com</a></li>
+                                        <li><span class="icon-network"></span><a href="http://www.warrengutierrez.com/">http://warrengutierrez.com</a></li>
                                     </ul>
                                 </div>
                             </div> <!-- /cont_info -->
@@ -559,7 +560,7 @@
                     var form_email = $("#form_email").val();
                     var form_message = $("#form_message").val();
                     $.post("php/mailer.php", {name: form_name, email: form_email, message: form_message}, function(results) {
-                        ga('send', 'event', 'category', 'action', 'message post', results);
+                        ga('send', 'event', 'button', 'click', 'message post', results);
                         
                         $('#form_loading').hide();
 
